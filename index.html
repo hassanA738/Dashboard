@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Responsive Dashboard Design | ArianProg</title>
+</head>
+<body>
+    
+    <aside class="align col">
+        <div class="logo align">
+            <img src="assets/pink_logo.png">
+            <a href="#">Arain<span>Prog</span></a>
+            <span id="menu-close" class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+        <div class="sidebar">
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+                <h4>Dashboard</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    person_outline
+                </span>
+                <h4>Users</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    receipt_long
+                </span>
+                <h4>History</h4>
+            </a>
+            <a href="#" class="align active">
+                <span class="material-symbols-outlined">
+                    insights
+                </span>
+                <h4>Analiytics</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    mail_outline
+                </span>
+                <h4>Tickets</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    inventory
+                </span>
+                <h4>Sale List</h4>
+                <span class="counter">
+                    27
+                </span>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    report_gmailerrorred
+                </span>
+                <h4>Reports</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <h4>Settings</h4>
+            </a>
+            <a href="#" class="align">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                <h4>New Login</h4>
+            </a>
+            <a href="#" class="align logout">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+                <h4>Logout</h4>
+            </a>
+        </div>
+    </aside>
+
+    <div class="main">
+        <div class="content">
+            <header>
+                <h1>Analytics</h1>
+                <div class="insights">
+                    <div class="item align justify">
+                        <div class="info">
+                            <p>Total Sales</p>
+                            <h4>$65,024</h4>
+                        </div>
+                        <div class="progress flex"></div>
+                    </div>
+                    <div class="item align justify">
+                        <div class="info">
+                            <p>Site Visit</p>
+                            <h4>29,981</h4>
+                        </div>
+                        <div class="progress flex"></div>
+                    </div>
+                    <div class="item align justify">
+                        <div class="info">
+                            <p>Searchers</p>
+                            <h4>14,147</h4>
+                        </div>
+                        <div class="progress flex"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="new-users">
+                <div class="separator">
+                    <h1>New users</h1>
+                </div>
+                <div class="items">
+                    <div class="item align col">
+                        <img src="assets/user-1.jpg">
+                        <h4>Amir</h4>
+                        <p>54 minutes ago</p>
+                    </div>
+                    <div class="item align col">
+                        <img src="assets/user-2.webp">
+                        <h4>Sara</h4>
+                        <p>54 minutes ago</p>
+                    </div>
+                    <div class="item align col">
+                        <img src="assets/user-3.jpg">
+                        <h4>Micheal</h4>
+                        <p>54 minutes ago</p>
+                    </div>
+                    <div class="item align col">
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                        <h4>More</h4>
+                        <p>New Users</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator">
+                <h1>Recent Orders</h1>
+            </div>
+
+            <div class="recent-orders">
+                <div class="col-1 align col">
+                    <h4>Course Name</h4>
+                    <p>JavaScript Tutorial</p>
+                    <p>CSS Full Course</p>
+                    <p>Flex-box Tutorial</p>
+                </div>
+                <div class="col-1 align col">
+                    <h4>Course Number</h4>
+                    <p>85743</p>
+                    <p>97345</p>
+                    <p>34509</p>
+                </div>
+                <div class="col-1 align col">
+                    <h4>Payment</h4>
+                    <p>Due</p>
+                    <p>Refunded</p>
+                    <p>Paid</p>
+                </div>
+                <div class="col-1 align col">
+                    <h4>Status</h4>
+                    <p class="warning">Pending</p>
+                    <p class="danger">Declined</p>
+                    <p class="primary">Active</p>
+                </div>
+                <div class="col-1 align col">
+                    <h4>Dets</h4>
+                    <p>Details</p>
+                    <p>Details</p>
+                    <p>Details</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="nav align">
+                <span id="menu-open" class="material-symbols-outlined">
+                    menu
+                </span>
+             <div class="end align">
+                
+                <div class="theme">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="theme-toggle"></label>
+                </div>
+                <div class="info align">
+                    <div class="name">
+                        <p>Hey,<b>Hassan</b></p>
+                        <p>Admin</p>
+                    </div>
+                    <img src="assets/user-1.jpg" alt="">
+                </div>
+             </div>
+            </div>
+
+            <div class="profile align col">
+                <img src="assets/pink_logo.png">
+                <h4>ArainProg</h4>
+                <p>Full Stack Developer</p>
+            </div>
+
+            <div class="reminders">
+                <div class="top align justify">
+                    <h4>Reminders</h4>
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+                </div>
+                <div class="item align justify">
+                    <div class="left align">
+                        <span class="material-symbols-outlined">
+                            volume_up
+                        </span>
+                        <div class="info">
+                            <h5>Workshop</h5>
+                            <p>08:00AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        more_vert
+                    </span>
+                </div>
+                <div class="item align justify">
+                    <div class="left align ">
+                        <span class="material-symbols-outlined">
+                            edit
+                        </span>
+                        <div class="info">
+                            <h5>Workshop</h5>
+                            <p>08:00AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div>
+            </div>
+
+            <div class="new flex">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                <p>Add Reminders</p>
+            </div>
+
+        </div>
+
+    </div>
+
+     <script src="script.js"></script>       
+</body>
+</html>
