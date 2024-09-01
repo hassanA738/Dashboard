@@ -1,0 +1,611 @@
+/* CSS VARIABLES */
+:root {
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #FFFFFF;
+    --color-info-dark: #7D8DA1;
+    --color-dark: #363949;
+    --color-light: #848bc82e;
+    --color-dark-variant: #677483;
+    --color-background: #F6F6F9;
+}
+
+/* CSS DARK THEME VARIABLES*/
+
+body.dark {
+    --color-background: #181A1E;
+    --color-white: #202528;
+    --color-dark: #EDEFFD;
+    --color-dark-variant: #A3BDCC;
+    --color-light: #00000066;
+}
+
+/* MAIN STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: var(--color-background);
+    width: 100%;
+    display: flex;
+    color: var(--color-dark);
+}
+
+/* UTILITY CLASSES used in index.html file */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+}
+
+.col{
+    flex-direction: column
+}
+
+.justify{
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+/* STYLING THE DAHBOARD */
+
+aside {
+    height: 100vh;
+    width: 210px;
+    padding: 20px 0;
+    transition: all 0.4s ease-out;
+}
+
+aside .logo {
+    gap: 6px;
+}
+
+aside .logo img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+aside .logo a {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+aside .logo a span {
+    color: var(--color-danger);
+}
+aside .logo >span {
+    display: none;
+}
+
+aside .sidebar {
+    height: 88vh;
+    background-color: var(--color-white);
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-top: 12px;
+    position: relative;
+}
+
+aside .sidebar:hover,
+.main .content header .insights .item:hover,
+.new-users .items:hover,
+.recent-orders:hover,
+.profile:hover,
+.reminders .item:hover {
+    box-shadow: none;
+}
+
+aside .sidebar a {
+    margin-left: 1.5rem;
+    height: 3rem;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar a span.material-symbols-outlined {
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:hover span.material-symbols-outlined {
+    margin-left: 0.6rem;
+}
+
+aside .sidebar a h4 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+aside .sidebar a span {
+    font-size: 22px;
+}
+
+aside .sidebar a.active {
+    background-color: var(--color-light);
+    padding-left: 1.5rem;
+    margin-left: 0;
+    width: 100%;
+    position: relative;
+
+}
+
+
+aside .sidebar a.active::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 6px;
+    background-color: var(--color-primary);
+    left: 0px;
+}
+
+aside .sidebar a span.counter {
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    border-radius: 4px;
+}
+
+aside .sidebar .logout {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.main {
+    display: flex;
+    flex: 6;
+}
+
+.main .content {
+    flex: 4.5;
+    padding: 20px 20px 20px 10px;
+}
+
+.main .right-section {
+    flex: 1.5;
+    padding: 20px 20px 20px 10px;
+}
+
+.main .content header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+.main .content header .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 15px;
+}
+
+.main .content header .insights .item .progress  {
+    height: 65px;
+    width: 65px;
+    position: relative;
+    border-radius: 50%;
+
+}
+
+
+.main .content header .insights .item {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    width: 100%;
+    height: 110px;
+    padding: 0 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.main .content header .insights .item .info p {
+    font-size: 14px;
+}
+
+.main .content header .insights .item .info h4 {
+    font-size: 20px;
+}
+
+.main .content header .insights .item .progress::after {
+    content: "+85%";
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main .content header .insights .item:nth-child(2) .progress::after {
+    content: "-48%";
+}
+
+.main .content header .insights .item:nth-child(3) .progress::after {
+    content: "+29%";
+}
+
+.main .content header .insights .item .progress {
+    position: relative;
+    background: radial-gradient(closest-side, var(--color-white) 79%, transparent 80% 100%), conic-gradient(var(--color-success) 85%, #fff 0%);
+}
+
+.main .content header .insights .item:nth-child(2) .progress {
+    background: radial-gradient(closest-side, var(--color-white) 79%, transparent 80% 100%), conic-gradient(var(--color-danger) 85%, #fff 0%);
+}
+
+.main .content header .insights .item:nth-child(3) .progress {
+    background: radial-gradient(closest-side, var(--color-white) 79%, transparent 80% 100%), conic-gradient(var(--color-primary) 85%, #fff 0%);
+}
+
+.separator {
+    margin: 12px 0;
+}
+
+.separator h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.new-users .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    gap: 20px;
+    align-items: center;
+}
+
+.new-users .items  img {
+    height: 68px;
+    width: 68px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.new-users .items h4 {
+    margin-top: 4px;
+}
+
+.new-users .items p {
+    font-size: 14px;
+}
+
+.new-users .items .item span {
+    font-size: 80px;
+    font-weight: 900;
+    color: var(--color-dark-variant);
+}
+
+.recent-orders {
+    background-color: var(--color-white);
+    padding: 20px 35px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recent-orders h4 {
+    font-size: 14px;
+}
+.recent-orders .col-1 {
+    gap: 15px;
+}
+
+.recent-orders p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+.nav {
+    justify-content: end;
+}
+
+.nav img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav .end {
+    gap: 20px;
+}
+
+.nav .theme {
+    display: flex;
+}
+
+.nav .theme .theme-toggle {
+    height: 28px;
+    width: 50px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.nav .theme .theme-toggle::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:checked + .theme-toggle::before {
+    transform: translateX(21px);
+    
+}
+
+.nav p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.nav span {
+    display: none;
+    cursor: pointer;
+}
+
+.nav .info  {
+    gap: 10px;
+}
+
+.profile {
+    background-color: var(--color-white);
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    padding-bottom: 20px;
+}
+
+.profile img {
+    width: 200px;
+    height: auto;
+    padding-right: 20px;
+}
+
+.profile h4 {
+    font-size: 18px;
+}
+
+.profile p {
+    font-size: 14px;
+}
+
+.reminders {
+    margin-top: 20px;
+}
+
+.reminders .top h4 {
+    font-weight: 600;
+}
+
+.reminders .top span{
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+.reminders .item {
+    margin-top: 12px;
+    background-color: var(--color-white);
+    padding: 12px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.reminders .item p {
+    font-size: 12px;
+}
+
+.reminders .item  .left {
+    gap: 15px;
+}
+
+.reminders .item span:nth-child(1) {
+    padding: 8px;
+    color: var(--color-white);
+    border-radius: 10px;
+    background-color: var(--color-success);
+}
+
+.reminders .item:nth-child(2) span:nth-child(1) {
+    background-color: var(--color-danger);
+}
+
+.new {
+    margin-top: 15px;
+}
+
+.new {
+    background-color: var(--color-white);
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    gap: 5px;
+    border: 2px var(--color-primary) dashed;
+}
+
+
+
+.new:hover {
+    box-shadow: none;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.new p {
+    font-size: 14px;
+}
+
+.new span {
+    font-size: 22px;
+}
+
+/* CSS MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+  aside {
+    width: 130px;
+  }
+
+  aside .logo a {
+    display: none;
+  }
+
+  aside .sidebar {
+    width: 62%;
+  }
+
+  .sidebar a h4 {
+    display: none;
+  }
+
+  aside .sidebar a span.material-symbols-outlined {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .main .content header .insights {
+        grid-template-columns: 1fr;
+    }
+.main {
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    position: fixed;
+    left: 0;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    top: 0;
+    width: 200px;
+    background-color: var(--color-white);
+    left: -100%;
+    z-index: 12;
+
+  }
+aside .logo span {
+    display: inline-block;
+    cursor: pointer;
+}
+  aside .logo a {
+    display: inline-block;
+  }
+  aside .sidebar {
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .main .content {
+    padding: 20px;
+  }
+
+  .nav {
+    position: absolute;
+    top: -15px;
+    width: 96%;
+    padding: 0 20px;
+    z-index: 1;
+    justify-content: space-between;
+  }
+
+  .nav span {
+    display: inline-block;
+  }
+
+  aside .sidebar a h4 {
+    display: inline-block;
+  }
+
+  .main {
+    position: relative;
+    top: 30px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .new-users .items{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recent-orders .col-1:nth-child(5),
+  .recent-orders .col-1:nth-child(3)  {
+    display: none;
+  }
+  .recent-orders {
+    padding: 20px;
+  }
+
+  .main .right-section {
+    padding: 12px;
+  }
+}
